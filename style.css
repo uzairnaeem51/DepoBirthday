@@ -1045,66 +1045,724 @@ body {
   }
 }
 
+/* =========================================
+   COMPLETE MOBILE RESPONSIVE
+   PAGE 1 + PAGE 2 + PAGE 3
+========================================= */
 
-/* =====================================================
-   MOBILE
-===================================================== */
+@media (max-width: 768px) {
 
-@media (max-width: 800px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .page {
+    width: 100vw;
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+
+  /* =========================================
+     PAGE 1 — HEART + ARROW GAME
+  ========================================= */
+
+  .page1 {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .game {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
 
   .game-title {
-    font-size: 18px;
+    position: absolute;
+    top: 8%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+  }
+
+  .heart-target {
+    position: absolute;
+
+    left: 68%;
+    top: 47%;
+
+    font-size: 85px;
+    transform: translate(-50%, -50%);
+  }
+
+  .arrow-wrap {
+    position: absolute;
+
+    left: 20%;
+    top: 55%;
+
+    width: 100px;
+    height: 45px;
+
+    touch-action: none;
+  }
+
+  .arrow {
+    transform-origin: center;
+  }
+
+  .aim-line {
+    max-width: 55vw;
+  }
+
+  .power-text {
+    position: absolute;
+
+    bottom: 9%;
+    left: 5%;
+    width: 90%;
+
+    text-align: center;
+
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+
+  /* =========================================
+     PAGE 2 — HAPPY BIRTHDAY ANIMATION
+  ========================================= */
+
+  .page2 {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+  }
+
+  .birthday-screen {
+    width: 92%;
+    max-width: 500px;
+
+    text-align: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .birthday-small {
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+  }
+
+  .birthday-text {
+    width: 100%;
+
+    font-size: clamp(42px, 12vw, 65px);
+    line-height: 1.05;
+
+    text-align: center;
+
+    word-break: normal;
+    white-space: nowrap;
+  }
+
+  .birthday-text .char {
+    display: inline-block;
+  }
+
+  .birthday-line {
+    width: 70%;
+    max-width: 280px;
+
+    margin: 18px auto 0;
+
+    height: 2px;
+  }
+
+
+  /* =========================================
+     PAGE 3 — FINAL PAGE
+  ========================================= */
+
+  .page3 {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+  }
+
+
+  /* ---------- FINAL TEXT ---------- */
+
+  .final-text {
+    position: absolute;
+
+    top: 6%;
+    left: 4%;
+
+    width: 92%;
+
+    transform: none;
+
+    text-align: center;
+
+    z-index: 30;
+  }
+
+  .final-text .made-line {
+    margin-bottom: 5px;
+
+    font-size: 14px;
+    line-height: 1.3;
+
+    letter-spacing: 1px;
+  }
+
+  .final-text h1 {
+    margin: 0;
+
+    font-size: clamp(38px, 11vw, 52px);
+    line-height: 1;
+
+    white-space: nowrap;
+  }
+
+  .final-text h2 {
+    margin: 8px 0 0;
+
+    font-size: clamp(28px, 8vw, 40px);
+    line-height: 1.1;
+
+    white-space: nowrap;
+  }
+
+
+  /* ---------- WISH ---------- */
+
+  .ishq-text {
+    width: 94%;
+    max-width: 360px;
+
+    margin: 14px auto 0;
+
+    font-size: 15px;
+    line-height: 1.55;
+
+    letter-spacing: 0;
+
+    text-align: center;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+
+  /* ---------- HEART TREE ---------- */
+
+  .heart-tree {
+    position: absolute;
+
+    left: 50%;
+    top: 49%;
+
+    width: 95vw;
+    height: 46vh;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+  }
+
+  .tree-crown {
+    transform: scale(.78);
+    transform-origin: center top;
+  }
+
+  .tree-trunk {
+    transform: scale(.78);
+    transform-origin: center bottom;
+  }
+
+  .tree-bow {
+    transform: scale(.65);
+    transform-origin: center;
+  }
+
+  .tree-hearts span {
+    font-size: 24px;
+  }
+
+
+  /* ---------- GROUND ---------- */
+
+  .tree-ground {
+    position: absolute;
+
+    bottom: 3%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 75%;
+    max-width: 350px;
+  }
+
+
+  /* ---------- FLOATING HEARTS ---------- */
+
+  .floating-hearts {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    z-index: 3;
+  }
+
+
+  /* ---------- FALLING PETALS ---------- */
+
+  .petals {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 40;
+  }
+}
+
+/* =========================================
+   COMPLETE MOBILE RESPONSIVE
+   PAGE 1 + PAGE 2 + PAGE 3
+========================================= */
+
+@media (max-width: 768px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  .page {
+    width: 100vw;
+    min-height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+
+  /* =========================================
+     PAGE 1 — HEART + ARROW GAME
+  ========================================= */
+
+  .page1 {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .game {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .game-title {
+    position: absolute;
+    top: 8%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+  }
+
+  .heart-target {
+    position: absolute;
+
+    left: 68%;
+    top: 47%;
+
+    font-size: 85px;
+    transform: translate(-50%, -50%);
+  }
+
+  .arrow-wrap {
+    position: absolute;
+
+    left: 20%;
+    top: 55%;
+
+    width: 100px;
+    height: 45px;
+
+    touch-action: none;
+  }
+
+  .arrow {
+    transform-origin: center;
+  }
+
+  .aim-line {
+    max-width: 55vw;
+  }
+
+  .power-text {
+    position: absolute;
+
+    bottom: 9%;
+    left: 5%;
+    width: 90%;
+
+    text-align: center;
+
+    font-size: 15px;
+    line-height: 1.4;
+  }
+
+
+  /* =========================================
+     PAGE 2 — HAPPY BIRTHDAY ANIMATION
+  ========================================= */
+
+  .page2 {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+  }
+
+  .birthday-screen {
+    width: 92%;
+    max-width: 500px;
+
+    text-align: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .birthday-small {
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+  }
+
+  .birthday-text {
+    width: 100%;
+
+    font-size: clamp(42px, 12vw, 65px);
+    line-height: 1.05;
+
+    text-align: center;
+
+    word-break: normal;
+    white-space: nowrap;
+  }
+
+  .birthday-text .char {
+    display: inline-block;
+  }
+
+  .birthday-line {
+    width: 70%;
+    max-width: 280px;
+
+    margin: 18px auto 0;
+
+    height: 2px;
+  }
+
+
+  /* =========================================
+     PAGE 3 — FINAL PAGE
+  ========================================= */
+
+  .page3 {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+  }
+
+
+  /* ---------- FINAL TEXT ---------- */
+
+  .final-text {
+    position: absolute;
+
+    top: 6%;
+    left: 4%;
+
+    width: 92%;
+
+    transform: none;
+
+    text-align: center;
+
+    z-index: 30;
+  }
+
+  .final-text .made-line {
+    margin-bottom: 5px;
+
+    font-size: 14px;
+    line-height: 1.3;
+
+    letter-spacing: 1px;
+  }
+
+  .final-text h1 {
+    margin: 0;
+
+    font-size: clamp(38px, 11vw, 52px);
+    line-height: 1;
+
+    white-space: nowrap;
+  }
+
+  .final-text h2 {
+    margin: 8px 0 0;
+
+    font-size: clamp(28px, 8vw, 40px);
+    line-height: 1.1;
+
+    white-space: nowrap;
+  }
+
+
+  /* ---------- WISH ---------- */
+
+  .ishq-text {
+    width: 94%;
+    max-width: 360px;
+
+    margin: 14px auto 0;
+
+    font-size: 15px;
+    line-height: 1.55;
+
+    letter-spacing: 0;
+
+    text-align: center;
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+
+
+  /* ---------- HEART TREE ---------- */
+
+  .heart-tree {
+    position: absolute;
+
+    left: 50%;
+    top: 49%;
+
+    width: 95vw;
+    height: 46vh;
+
+    transform: translateX(-50%);
+
+    z-index: 10;
+  }
+
+  .tree-crown {
+    transform: scale(.78);
+    transform-origin: center top;
+  }
+
+  .tree-trunk {
+    transform: scale(.78);
+    transform-origin: center bottom;
+  }
+
+  .tree-bow {
+    transform: scale(.65);
+    transform-origin: center;
+  }
+
+  .tree-hearts span {
+    font-size: 24px;
+  }
+
+
+  /* ---------- GROUND ---------- */
+
+  .tree-ground {
+    position: absolute;
+
+    bottom: 3%;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 75%;
+    max-width: 350px;
+  }
+
+
+  /* ---------- FLOATING HEARTS ---------- */
+
+  .floating-hearts {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    z-index: 3;
+  }
+
+
+  /* ---------- FALLING PETALS ---------- */
+
+  .petals {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 40;
+  }
+}
+
+
+/* =========================================
+   SMALL PHONES — 400px OR LESS
+========================================= */
+
+@media (max-width: 300px) {
+
+  /* PAGE 1 */
+
+  .game-title {
+    top: 7%;
+    font-size: 23px;
   }
 
   .heart-target {
     left: 70%;
-    width: 80px;
-    height: 80px;
-    font-size: 80px;
-    line-height: 80px;
+    top: 46%;
+    font-size: 72px;
   }
 
   .arrow-wrap {
-    width: 100px;
+    left: 17%;
+    top: 56%;
   }
 
-  .arrow {
-    transform: scale(.85);
-    transform-origin: center;
+  .power-text {
+    bottom: 7%;
+    font-size: 14px;
   }
+
+
+  /* PAGE 2 */
+
+  .birthday-small {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+
+  .birthday-text {
+    font-size: 40px;
+  }
+
+  .birthday-line {
+    margin-top: 15px;
+  }
+
+
+  /* PAGE 3 */
 
   .final-text {
-    left: 4%;
-    top: 20%;
+    top: 5%;
+  }
+
+  .final-text .made-line {
+    font-size: 12px;
   }
 
   .final-text h1 {
-    font-size: 50px;
+    font-size: 36px;
   }
 
-  .made-line {
-    font-size: 15px;
+  .final-text h2 {
+    font-size: 27px;
+  }
+
+  .ishq-text {
+    width: 92%;
+    max-width: 320px;
+
+    margin-top: 11px;
+
+    font-size: 13.5px;
+    line-height: 1.5;
   }
 
   .heart-tree {
+    top: 48%;
     width: 100vw;
-    height: 70vh;
+    height: 47vh;
+  }
 
-    right: -8%;
-    bottom: 0;
+  .tree-crown {
+    transform: scale(.70);
   }
 
   .tree-trunk {
-    width: 75px;
+    transform: scale(.70);
   }
 
   .tree-bow {
-    transform:
-      translateX(-50%)
-      scale(.75);
+    transform: scale(.58);
   }
 
   .tree-hearts span {
-    font-size: 25px;
+    font-size: 21px;
   }
 }
